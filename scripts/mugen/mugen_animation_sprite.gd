@@ -6,9 +6,7 @@ extends AnimatedSprite2D
 
 signal element_update(element, collisions)
 
-const SpriteBundle = preload("res://scripts/mugen/sprite_bundle.gd")
-
-var sprite_bundle_ref: SpriteBundle
+@export var sprite_bundle_ref : SpriteBundle
 var frame_mapping: Dictionary = {}
 var image_mapping: Dictionary = {}
 var is_facing_right: bool = true
@@ -214,10 +212,10 @@ func check_collision(other_sprite: MugenAnimationSprite, type: int) -> bool:
 	
 	if type == 1:  # Attack collision
 		return overlaps_area(attacking_area_2d, other_sprite.collision_area_2d) or \
-		       overlaps_area(attacking_area_2d, other_sprite.attacking_area_2d)
+			   overlaps_area(attacking_area_2d, other_sprite.attacking_area_2d)
 	elif type == 2:  # Body collision
 		return overlaps_area(collision_area_2d, other_sprite.collision_area_2d) or \
-		       overlaps_area(collision_area_2d, other_sprite.attacking_area_2d)
+			   overlaps_area(collision_area_2d, other_sprite.attacking_area_2d)
 	
 	return false
 

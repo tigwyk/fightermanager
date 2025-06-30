@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1uk0ojqtnx28"]
+
+[ext_resource type="Script" uid="uid://bw0grh5g5dt7s" path="res://scripts/mugen/mugen_animation_sprite.gd" id="1_txtt3"]
+
+[node name="Fighter" type="AnimatedSprite2D"]
+script = ExtResource("1_txtt3")

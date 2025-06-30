@@ -83,6 +83,7 @@ func _render_bg_layers():
 			anim_sprite.play()
 			anim_sprite.position = Vector2(layer.get("startx", "0").to_float(), layer.get("starty", "0").to_float())
 			_add_bg_layer_properties(anim_sprite, layer)
+			print(anim_sprite)
 			add_child(anim_sprite)
 			animated_sprites.append({"node": anim_sprite, "layer": layer})
 		else:

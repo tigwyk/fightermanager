@@ -1,5 +1,5 @@
 class_name SpriteBundle
-extends RefCounted
+extends Resource
 
 ## SpriteBundle - Manages MUGEN SFF sprites and creates Godot textures
 ## Based on godot-mugen reference implementation for best practices

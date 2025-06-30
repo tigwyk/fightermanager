@@ -7,7 +7,6 @@ class_name MainMenuUI
 @onready var new_career_btn: Button = %NewCareerButton
 @onready var load_career_btn: Button = %LoadCareerButton
 @onready var battle_viewer_btn: Button = %BattleViewerButton
-@onready var mugen_menu_btn: Button = %MugenMenuButton
 @onready var fighter_management_btn: Button = %FighterManagementButton
 @onready var tournament_btn: Button = %TournamentButton
 @onready var settings_btn: Button = %SettingsButton
@@ -151,18 +150,6 @@ func _on_battle_viewer_pressed():
 		get_tree().change_scene_to_packed(battle_scene)
 	else:
 		_update_status("Error: Battle scene not found")
-
-func _on_mugen_menu_pressed():
-	"""Open MUGEN fighting menu"""
-	_update_status("Opening MUGEN fighting menu...")
-	print("🥊 MUGEN Menu selected")
-	
-	# Load the MUGEN main menu scene for fighting modes
-	var mugen_scene = load("res://scenes/core/mugen_main_menu.tscn")
-	if mugen_scene:
-		get_tree().change_scene_to_packed(mugen_scene)
-	else:
-		_update_status("Error: MUGEN menu not found")
 
 func _on_settings_pressed():
 	"""Open settings"""

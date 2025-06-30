@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvq4xr1h0u5yd"]
+[gd_scene load_steps=4 format=3 uid="uid://bvq4xr1h0u5yd"]
 
 [ext_resource type="Script" uid="uid://cyxsrjaj4xw0y" path="res://scripts/ui/main_menu_ui.gd" id="1_8r5m3"]
+[ext_resource type="FontFile" uid="uid://bgisx7o44e57a" path="res://fonts/FighterFish-3zG53.otf" id="2_r6wqj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7ldt"]
+font = ExtResource("2_r6wqj")
+font_size = 92
+font_color = Color(1, 0.8, 0, 1)
 
 [node name="FighterManagerMainMenu" type="Control"]
 layout_mode = 3
@@ -42,6 +48,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.8, 0, 1)
 theme_override_font_sizes/font_size = 48
 text = "FIGHTER MANAGER"
+label_settings = SubResource("LabelSettings_c7ldt")
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="MainContainer/TitleSection"]
