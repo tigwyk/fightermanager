@@ -1,0 +1,138 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqr8xm1h0u50d"]
+
+[ext_resource type="Script" uid="uid://dhmwdpv0gdr35" path="res://scripts/ui/tournament_browser_ui.gd" id="1_tournament"]
+
+[node name="TournamentBrowser" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tournament")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "← Back to Main Menu"
+
+[node name="Title" type="Label" parent="MainContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Tournament Browser"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="ContentContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TournamentList" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TournamentLabel" type="Label" parent="MainContainer/ContentContainer/TournamentList"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Available Tournaments"
+
+[node name="TournamentTree" type="Tree" parent="MainContainer/ContentContainer/TournamentList"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DetailsPanel" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DetailsLabel" type="Label" parent="MainContainer/ContentContainer/DetailsPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Tournament Details"
+
+[node name="TournamentInfo" type="RichTextLabel" parent="MainContainer/ContentContainer/DetailsPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.8, 0.8, 0.8, 1)
+bbcode_enabled = true
+text = "[b]Select a tournament to view details[/b]
+
+Tournament information will include:
+• Entry requirements
+• Prize pool
+• Tournament format
+• Participating fighters
+• Registration deadline"
+fit_content = true
+
+[node name="ActionPanel" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ActionLabel" type="Label" parent="MainContainer/ContentContainer/ActionPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Actions"
+
+[node name="ActionButtons" type="VBoxContainer" parent="MainContainer/ContentContainer/ActionPanel"]
+layout_mode = 2
+
+[node name="RegisterButton" type="Button" parent="MainContainer/ContentContainer/ActionPanel/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "🎫 Register Fighter"
+
+[node name="ViewBracketButton" type="Button" parent="MainContainer/ContentContainer/ActionPanel/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "🏆 View Bracket"
+
+[node name="ScheduleButton" type="Button" parent="MainContainer/ContentContainer/ActionPanel/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "📅 View Schedule"
+
+[node name="CreateTournamentButton" type="Button" parent="MainContainer/ContentContainer/ActionPanel/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "➕ Create Tournament"
+
+[node name="RefreshButton" type="Button" parent="MainContainer/ContentContainer/ActionPanel/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "🔄 Refresh List"

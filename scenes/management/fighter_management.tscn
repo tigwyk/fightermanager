@@ -1,0 +1,137 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqr8xm1h0u50d"]
+
+[ext_resource type="Script" uid="uid://ch4nwx2v3erob" path="res://scripts/ui/fighter_management_ui.gd" id="1_fighter"]
+
+[node name="FighterManagement" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fighter")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "← Back to Main Menu"
+
+[node name="Title" type="Label" parent="MainContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Fighter Management"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="ContentContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FighterPanel" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FighterLabel" type="Label" parent="MainContainer/ContentContainer/FighterPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Fighter Selection"
+
+[node name="FighterList" type="ItemList" parent="MainContainer/ContentContainer/FighterPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AddFighterButton" type="Button" parent="MainContainer/ContentContainer/FighterPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "➕ Add New Fighter"
+
+[node name="TrainingPanel" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TrainingLabel" type="Label" parent="MainContainer/ContentContainer/TrainingPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Training Options"
+
+[node name="TrainingGrid" type="GridContainer" parent="MainContainer/ContentContainer/TrainingPanel"]
+layout_mode = 2
+columns = 2
+
+[node name="StrengthButton" type="Button" parent="MainContainer/ContentContainer/TrainingPanel/TrainingGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "💪 Strength Training"
+
+[node name="SpeedButton" type="Button" parent="MainContainer/ContentContainer/TrainingPanel/TrainingGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "🏃 Speed Training"
+
+[node name="TechniqueButton" type="Button" parent="MainContainer/ContentContainer/TrainingPanel/TrainingGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "🎯 Technique Training"
+
+[node name="DefenseButton" type="Button" parent="MainContainer/ContentContainer/TrainingPanel/TrainingGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "🛡️ Defense Training"
+
+[node name="StatsPanel" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatsLabel" type="Label" parent="MainContainer/ContentContainer/StatsPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Fighter Stats"
+
+[node name="StatsDisplay" type="RichTextLabel" parent="MainContainer/ContentContainer/StatsPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.8, 0.8, 0.8, 1)
+bbcode_enabled = true
+text = "[b]Select a fighter to view stats[/b]
+
+Stats will include:
+• Strength: Power of attacks
+• Speed: Movement and reaction time
+• Technique: Combo accuracy
+• Defense: Damage reduction
+• Stamina: Training capacity
+• Experience: Career progress"
+fit_content = true

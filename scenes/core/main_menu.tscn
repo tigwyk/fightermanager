@@ -1,0 +1,229 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvq4xr1h0u5yd"]
+
+[ext_resource type="Script" uid="uid://cyxsrjaj4xw0y" path="res://scripts/ui/main_menu_ui.gd" id="1_8r5m3"]
+
+[node name="FighterManagerMainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8r5m3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleSection" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameTitle" type="Label" parent="MainContainer/TitleSection"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "FIGHTER MANAGER"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MainContainer/TitleSection"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "Build Champions • Manage Careers • Create Legends"
+horizontal_alignment = 1
+
+[node name="MenuContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CareerSection" type="VBoxContainer" parent="MainContainer/MenuContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CareerLabel" type="Label" parent="MainContainer/MenuContainer/LeftPanel/CareerSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Career Management"
+
+[node name="CareerButtons" type="VBoxContainer" parent="MainContainer/MenuContainer/LeftPanel/CareerSection"]
+layout_mode = 2
+
+[node name="NewCareerButton" type="Button" parent="MainContainer/MenuContainer/LeftPanel/CareerSection/CareerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "🚀 Start New Career"
+
+[node name="LoadCareerButton" type="Button" parent="MainContainer/MenuContainer/LeftPanel/CareerSection/CareerButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "📂 Continue Career"
+
+[node name="Spacer1" type="Control" parent="MainContainer/MenuContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SystemsSection" type="VBoxContainer" parent="MainContainer/MenuContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SystemsLabel" type="Label" parent="MainContainer/MenuContainer/LeftPanel/SystemsSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Quick Access"
+
+[node name="SystemButtons" type="VBoxContainer" parent="MainContainer/MenuContainer/LeftPanel/SystemsSection"]
+layout_mode = 2
+
+[node name="CharacterTestButton" type="Button" parent="MainContainer/MenuContainer/LeftPanel/SystemsSection/SystemButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "🧪 Test MUGEN System"
+
+[node name="SettingsButton" type="Button" parent="MainContainer/MenuContainer/LeftPanel/SystemsSection/SystemButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "⚙️ Settings"
+
+[node name="CenterPanel" type="VBoxContainer" parent="MainContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FightingSection" type="VBoxContainer" parent="MainContainer/MenuContainer/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FightingLabel" type="Label" parent="MainContainer/MenuContainer/CenterPanel/FightingSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Battle Systems"
+
+[node name="FightingButtons" type="VBoxContainer" parent="MainContainer/MenuContainer/CenterPanel/FightingSection"]
+layout_mode = 2
+
+[node name="BattleViewerButton" type="Button" parent="MainContainer/MenuContainer/CenterPanel/FightingSection/FightingButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "⚔️ Watch Battles"
+
+[node name="Spacer2" type="Control" parent="MainContainer/MenuContainer/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ManagementSection" type="VBoxContainer" parent="MainContainer/MenuContainer/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ManagementLabel" type="Label" parent="MainContainer/MenuContainer/CenterPanel/ManagementSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Management"
+
+[node name="ManagementButtons" type="VBoxContainer" parent="MainContainer/MenuContainer/CenterPanel/ManagementSection"]
+layout_mode = 2
+
+[node name="FighterManagementButton" type="Button" parent="MainContainer/MenuContainer/CenterPanel/ManagementSection/ManagementButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "🏋️ Fighter Training"
+
+[node name="TournamentButton" type="Button" parent="MainContainer/MenuContainer/CenterPanel/ManagementSection/ManagementButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "🏆 Tournament Browser"
+
+[node name="RightPanel" type="VBoxContainer" parent="MainContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoSection" type="VBoxContainer" parent="MainContainer/MenuContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoLabel" type="Label" parent="MainContainer/MenuContainer/RightPanel/InfoSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Game Info"
+
+[node name="StatusLabel" type="Label" parent="MainContainer/MenuContainer/RightPanel/InfoSection"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 16
+text = "Fighter Manager v0.1.0 - Ready"
+autowrap_mode = 3
+
+[node name="DescriptionText" type="RichTextLabel" parent="MainContainer/MenuContainer/RightPanel/InfoSection"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[b]Welcome to Fighter Manager![/b]
+
+Build your fighters from rookies to champions. Train their skills, manage their careers, and guide them through tournaments to become legends.
+
+• Start careers and develop fighters
+• Train stats and learn new moves  
+• Enter tournaments and win prizes
+• Manage finances and sponsorships
+• Use authentic MUGEN fighters and stages"
+fit_content = true
+
+[node name="Spacer3" type="Control" parent="MainContainer/MenuContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExitSection" type="VBoxContainer" parent="MainContainer/MenuContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExitButton" type="Button" parent="MainContainer/MenuContainer/RightPanel/ExitSection"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "🚪 Exit Game"
+
+[node name="FooterContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="VersionLabel" type="Label" parent="MainContainer/FooterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "Fighter Manager v0.1.0 - Alpha"

@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="fightermanager"
+run/main_scene="uid://bvq4xr1h0u5yd"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+FrayInputMap="*res://addons/fray/src/input/autoloads/fray_input_map.gd"
+FrayInput="*res://addons/fray/src/input/autoloads/fray_input.gd"
+MugenSystem="*res://scripts/core/mugen_system.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fray/plugin.cfg")
